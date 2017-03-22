@@ -1,0 +1,150 @@
+.hero {
+  background: url('../img/bg/hero-bg.jpg') center center no-repeat;
+  background-size: cover;
+  position: relative;
+  & .container {
+    position: static;
+  }
+  &__container {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    &::before, &::after {
+      content: "";
+      display: table;
+    }
+    &::after {
+      clear: both;
+    }
+  }
+  &__left {
+    float: left;
+    width: 50%;
+  }
+  &__img {
+    display: inline-block;
+    max-width: 100%;
+    left: 50%;
+    position: relative;
+    transform: translateX(-50%);
+  }
+  &__right {
+    float: left;
+    width: 50%;
+    padding-top: 115px;
+  }
+  &__desc {
+    font-family: lifehackmedium, Arial, sans-serif;
+    font-size: 65px;
+    line-height: 1em;
+    text-transform: lowercase;
+    color: white;
+  }
+}
+
+.header {
+  padding-top: 12px;
+  &__logo {
+    float: left;
+    width: 32%;
+    & a {
+      display: inline-block;
+    }
+  }
+  &__menu {
+    float: left;
+    width: 68%;
+    padding-top: 13px;
+    &-order {
+      display: inline-block;
+      vertical-align: middle;
+      background: #e45028;
+      width: 15%;
+      font-family: ubuntumedium, Arial, sans-serif;
+      font-size: 13px;
+      text-transform: uppercase;
+      color: #fff;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 5px;
+      padding: 9px 0;
+      margin-left: 1%;
+    }
+  }
+}
+
+.nav {
+  display: inline-block;
+  width: 83%;
+  vertical-align: middle;
+  &__list {
+    width: 100%;
+    &::before, &::after {
+      content: "";
+      display: table;
+    }
+    &::after {
+      clear: both;
+    }
+  }
+  &__item {
+    display: block;
+    float: left;
+    margin-right: 15px;
+    &::after {
+      content: "";
+      display: inline-block;
+      vertical-align: middle;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: white;
+      margin-left: 15px;
+    }
+    &:last-child {
+      margin-right: 0;
+      &::after {
+        display: none;
+      }
+    }
+  }
+  &__link {
+    display: inline-block;
+    vertical-align: middle;
+    font-family: ubuntumedium, Arial, sans-serif;
+    color: white;
+    font-size: 13px;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+}
+
+.down-arrow {
+  display: block;
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  left: 50%;
+  bottom: 20px;
+  margin-left: -15px;
+  transition: .3s;
+  & svg {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: .3s;
+  }
+  &:hover svg {
+    width: 35px;
+    height: 35px;
+    margin-top: -15px;
+  }
+}
+
+
+

@@ -1,0 +1,46 @@
+.fixed-menu {
+  top: 90px;
+  right: 40px;
+  position: fixed;
+  &__item {
+    margin-bottom: 5px;
+  }
+  &__link {
+    display: block;
+    width: 16px;
+    height: 16px;
+    position: relative;
+    &::after, &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+    }
+    &::before {
+      width: 0;
+      height: 0;
+      border-radius: 50%;
+      border: 1px solid #fff;
+      opacity: 0;
+      transition: .3s;
+    }
+    &::after {
+      background: #fff;
+      width: 6px;
+      height: 6px;
+    }
+    &:hover::before {
+      width: 14px;
+      height: 14px;
+      opacity: 1;
+    }
+  }
+  &__item.active &__link::before {
+    width: 14px;
+    height: 14px;
+    opacity: 1;
+  }
+}

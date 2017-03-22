@@ -1,0 +1,18 @@
+@import "layout/fonts";
+@import "../../bower_components/normalize-scss/sass/normalize";
+@include normalize();
+@import "../../bower_components/owl.carousel/dist/assets/owl.carousel.css";
+@import "../../bower_components/fancybox/dist/jquery.fancybox.css";
+
+@import "layout/adjustment";
+@import "layout/fixed-menu";
+@import "layout/popup";
+
+@import "sections/hero";
+@import "sections/best";
+@import "sections/burgers";
+@import "sections/team";
+@import "sections/menu";
+@import "sections/reviews";
+@import "sections/order";
+@import "sections/map";
